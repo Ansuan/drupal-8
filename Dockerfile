@@ -27,4 +27,4 @@ USER 1001
 WORKDIR /app
 
 # run composer
-RUN COMPOSER_HOME=/app/composer-cache composer install --no-dev --prefer-dist --no-interaction --no-ansi --optimize-autoloader
+RUN COMPOSER_HOME=/app composer install
