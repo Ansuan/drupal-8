@@ -1,0 +1,15 @@
+
+forms_demo.custom_form_controller_show_custom_form:
+  path: '/forms-demo/custom-form'
+  defaults:
+    _controller: '\Drupal\forms_demo\Controller\CustomFormController::show_custom_form'
+    _title: 'A custom form'
+  requirements:
+    _permission: 'access content'
+forms_demo.custom_form:
+  path: '/forms_demo/form/custom'
+  defaults:
+    _form: '\Drupal\forms_demo\Form\CustomForm'
+    _title: 'CustomForm'
+  requirements:
+    _access: 'TRUE'

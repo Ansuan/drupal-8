@@ -1,0 +1,14 @@
+uuid: 5cb5846c-69c2-4cb8-b8db-cd2387097c2b
+name: 'D8 composer'
+mail: b@b.cc
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

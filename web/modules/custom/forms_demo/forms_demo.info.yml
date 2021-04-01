@@ -1,0 +1,5 @@
+name: 'Forms Demo'
+type: module
+description: 'Demonstrate Drupal 8 forms theming'
+core: 8.x
+package: 'Custom'

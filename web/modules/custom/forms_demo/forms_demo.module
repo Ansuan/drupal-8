@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains forms_demo.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function forms_demo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the forms_demo module.
+    case 'help.page.forms_demo':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Demonstrate Drupal 8 forms theming') . '</p>';
+      return $output;
+
+    default:
+  }
+}
