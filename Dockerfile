@@ -14,17 +14,18 @@ RUN  docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-d
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# create user
-RUN useradd -u 1001 -r -g 0 -d /app -s /bin/bash -c "Default Application User" default \
-    && mkdir -p /app \
-    && chown -R 1001:0 /app && chmod -R g+rwX /app
-
 # copy code
 COPY . /app
 
+# create user
+RUN useradd -u 1001 -r -g 0 -d /app -s /bin/bash -c "Default Application User" default \
+    && mkdir -p /app \
+    && chown -R 1001:0 /app \
+    && chmod -R g+rwX /app
+
 USER 1001
 
-WORKDIR /app
+WORKDIR /app/web
 
 # run composer
-RUN COMPOSER_HOME=/app composer install
+RUN COMPOSER_HOME=/app/web composer install

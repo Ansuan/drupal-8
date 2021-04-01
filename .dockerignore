@@ -1,3 +1,7 @@
 # Files.
 *~
-.git
+.git*
+.env*
+Dockerfile*
+assets
+README.md
