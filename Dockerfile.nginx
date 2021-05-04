@@ -14,7 +14,6 @@ RUN rsync -rp /app/assets/nginx/ /
 
 RUN chown -R 1001:0 /var/log && chmod -R g+rwX /var/log
 RUN chown -R 1001:0 /var/cache/nginx && chmod -R g+rwX /var/cache/nginx
-RUN chown -R 1001:0 /var/run && chmod -R g+rwX /var/run
 RUN chown -R 1001:0 /etc/nginx && chmod -R g+rwX /etc/nginx
 
 EXPOSE 8080
